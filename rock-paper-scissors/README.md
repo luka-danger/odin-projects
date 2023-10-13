@@ -12,7 +12,7 @@ The task for this project was to build a Rock, Paper, Scissors game with an inte
 All images are free, public images from Unsplash.com 
 
 ## Screenshots:
-![Test](/images-rock-paper-scissors/Rps.png)
+![alt text](/images-rock-paper-scissors/Rps.png)
 
 ![alt text](/images-rock-paper-scissors/RPS2.png)
 
