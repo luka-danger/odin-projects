@@ -3,12 +3,61 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Table template</title>
-    <link href="minimal-table.css" rel="stylesheet" type="text/css">
+    <title>Planet Data</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Table template</h1>
-
+    <table>
+      <tr>
+        <colgroup style="font-weight: bold;">
+          <td colspan="2"></td>
+          <td>Name</td>
+          <td>Mass (10<sup>24</sup>kg)</td>
+          <td>Diameter (km)</td>
+          <td>Density (kg/m<sup>2</sup>)</td>
+          <td>Gravity (m/s<sup>2</sup>)</td>
+          <td>Length of day (hours)</td>
+          <td>Distance from Sun (10<sup>6</sup>km)</td>
+          <td>Mean temperature (°C)</td>
+          <td>Number of moons</td>
+          <td>Notes</td>
+        </colgroup>
+      </tr>
+      <tr>
+        <td rowspan="4" colspan="2">Terrestrial planets</td>
+        <td>Mercury</td>
+      </tr>
+      <tr>
+        <td>Venus</td>
+      </tr>
+      <tr>
+        <td>Earth</td>
+      </tr>
+      <tr>
+        <td>Mars</td>
+      </tr>
+      <tr>
+        <td rowspan="4">Jovian planets</td>
+        <td rowspan="2">Gas giants</td>
+        <td>Jupiter</td>
+      </tr>
+      <tr>
+        <td>Saturn</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Ice giants</td>
+        <td>Uranus</td>
+      </tr>
+      <tr>
+        <td>Neptune</td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">Dwarf planets</td>
+        <td rowspan="2">Pluto</td>
+      </tr>
+      <tr>
+      </tr>
+    </table>
 
   </body>
 </html>
