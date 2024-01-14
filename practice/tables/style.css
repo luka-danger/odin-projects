@@ -1,5 +1,6 @@
-. {
-  background-image: ;
+body {
+  background-image: url(space.avif);
+  background-size: 75%; 
 }
 
 html {
@@ -46,6 +47,10 @@ html {
     font-weight: bold;
   }
 
-  #span {
-    padding: 25px
+ h1, caption {
+    color: white
+  }
+
+  #white {
+    color: white
   }
