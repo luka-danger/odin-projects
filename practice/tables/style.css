@@ -54,3 +54,9 @@ html {
   #white {
     color: white
   }
+
+  .my-div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
