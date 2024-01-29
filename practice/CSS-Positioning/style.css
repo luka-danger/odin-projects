@@ -1,19 +1,22 @@
 .parent {
-
+    position: relative;
+    background-color: rgba(133, 133, 200, 0.931);
+    height: 200vh;
 }
 
 .child-one {
     /* Absolute completely removes element from document flow
        Helfpul when you want to stick element in specific position 
        But want to keep everything around it static*/
-    position: absolute; 
-    top: 0px; 
+    position: fixed; 
+    top: 205px; 
+    background-color: rgb(44, 216, 44);
 }
 
 .child-two {
-    
+    background-color: rgb(206, 157, 165);
 }
 
 .child-three {
-    
+    background-color: rgb(221, 44, 221);
 }
