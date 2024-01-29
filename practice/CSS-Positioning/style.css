@@ -8,8 +8,8 @@
     /* Absolute completely removes element from document flow
        Helfpul when you want to stick element in specific position 
        But want to keep everything around it static*/
-    position: fixed; 
-    top: 205px; 
+    position: sticky; 
+    top: 0; 
     background-color: rgb(44, 216, 44);
 }
 
@@ -19,4 +19,6 @@
 
 .child-three {
     background-color: rgb(221, 44, 221);
+    position: sticky;
+    top: 0; 
 }
