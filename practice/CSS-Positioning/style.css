@@ -1,7 +1,18 @@
+:root {
+    --sassy-font: hotpink; 
+    --big-text: 40px; 
+    color: var(--sassy-font)
+}
+
+body {
+    background: linear-gradient(to right, rgb(95, 186, 95), rgb(0, 179, 255))
+}
+
 .parent {
-    position: relative;
-    background-color: rgba(133, 133, 200, 0.931);
-    height: 200vh;
+    position: static;
+    height: 500vh;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .child-one {
@@ -11,14 +22,20 @@
     position: sticky; 
     top: 0; 
     background-color: rgb(44, 216, 44);
+    color: var(--sassy-font);
+    font-size: var(--big-text);
 }
 
 .child-two {
     background-color: rgb(206, 157, 165);
+    top: 20px;
+    color: brown;
+    font-size: var(--big-text);
 }
 
 .child-three {
     background-color: rgb(221, 44, 221);
     position: sticky;
     top: 0; 
+    font-size: var(--big-text);
 }
