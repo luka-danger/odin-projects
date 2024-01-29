@@ -1,0 +1,20 @@
+.parent {
+
+}
+
+.child-one {
+    /* Relative allows you to change top, left, right, and bottom of element */ 
+    /* Will not use these directions very often with relative elements */ 
+    position: relative;
+    left: 10px; 
+    /* Directions take element out of document flow, so no longer works like static element*/
+    top: 10px;
+}
+
+.child-two {
+    
+}
+
+.child-three {
+    
+}
