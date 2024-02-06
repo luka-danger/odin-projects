@@ -59,12 +59,11 @@
                     <span>Name</span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </p>
             <p>
                 <label for="email">
                     <span>Email</span>
-                    <strong><span aria-label="required">*</span></strong>
                 </label>
                 <input type="email" id="email" name="email">
             </p>
@@ -84,20 +83,20 @@
                     <span>Credit Card Number:</span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="password" id="credit-card" name="credit-card">
+                <input type="password" id="credit-card" name="credit-card" required>
             </p>
             <p>
                 <label for="expiration-date">
                     <span>Expiration</span>
                     <strong><span aria-label="required">*</span></strong>
                  </label>
-                <input type="expiration-date" id="expo" name="expiration-date">
+                <input type="expiration-date" id="expo" name="expiration-date" required>
 
-                <label for="expiration-date"> 
+                <label for="cvv"> 
                     <span>CVV</span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="expiration-date" id="cvv" name="expiration-date">
+                <input type="cvv" id="cvv" name="cvv" required>
             </p>
             <div id="button-div">
                 <button type="submit">Submit</button>

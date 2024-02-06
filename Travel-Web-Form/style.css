@@ -80,7 +80,7 @@ textarea {
  
 #expo,
 #cvv {
-    width: max(50px, 5.05em)
+    width: max(50px, 5rem)
 }
 
 fieldset {
