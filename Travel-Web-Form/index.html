@@ -90,13 +90,25 @@
                     <span>Expiration</span>
                     <strong><span aria-label="required">*</span></strong>
                  </label>
-                <input type="expiration-date" id="expo" name="expiration-date" required>
+                <input 
+                type="expiration-date" 
+                id="expo" 
+                name="expiration-date" 
+                required
+                
+                minlength="7" 
+                maxlength="7" />
 
                 <label for="cvv"> 
                     <span>CVV</span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="cvv" id="cvv" name="cvv" required>
+                <input 
+                type="password" 
+                id="cvv" name="cvv" 
+                required 
+                minlength="3" 
+                maxlength="4" />
             </p>
             <div id="button-div">
                 <button type="submit">Submit</button>
