@@ -60,11 +60,6 @@ ul {
     display: flex; 
 }
 
-button {
-    margin: 5px;
-    font: 1em sans-serif;
-}
-
 #travel, 
 .form-border {
     background-color: rgba(225, 225, 225, 0.756);
@@ -91,4 +86,33 @@ fieldset {
 
 input:invalid:focus {
     box-shadow: 0 0 5px 1px red;
+}
+
+#button-div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 16px;
+    font-weight: bold;
+
+    margin: 5px;
+  
+    color: #FFFFFF;
+    background-color: rgba(45, 156, 235, 0.807);
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: rgba(121, 190, 239, 0.807);
+  }
+  
+button:active {
+    background-color: rgba(45, 156, 235, 0.534);
   }
