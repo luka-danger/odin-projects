@@ -64,4 +64,8 @@ h1 {
     display: flex; 
     justify-content: center;
 }
-
+ 
+#expo,
+#cvv {
+    width: max(50px, 5.45em)
+}
