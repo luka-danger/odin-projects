@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totally Legit Travel Company</title>
+</head>
+<body>
+    <form>
+        <h1>Travel Form</h1>
+        <fieldset id="travel">
+            <legend id="travel-heading">Travel Details</legend>
+            <p>
+                <ul>Destination
+                    <li>
+                        <label for="destination1">
+                            <input type="radio" id="destination1" name="destination" value="ST" /> 
+                            Saturn 
+                        </label>
+                    </li>
+                    <li>
+                        <label for="destination1">
+                            <input type="radio" id="destination2" name="destination" value="CR" />
+                            The Citadel of Ricks
+                        </label>
+                    </li>
+                    <li>
+                        <label for="destination3">
+                            <input type="radio" id="destination3" name="destination" value="KC" />
+                            Kansas City
+                        </label> 
+                    </li>
+                </ul>
+                </p>
+                <p> 
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </p>
+                <p>
+                    <label for="travel-method">
+                      <span>Travel Method:</span>
+                    </label>
+                    <select id="method" name="method">
+                      <option value="plane">Plane</option>
+                      <option value="jetpack">Spaceship</option>
+                      <option value="unicycle">Unicycle</option>
+                      <option value="walking">Walking (Cheapest Option!)</option>
+                    </select>
+                  </p>
+        </fieldset>
+        <p></p>
+        <fieldset class="form-border">
+            <legend id="payment">Payment</legend> 
+            
+            <p>
+                <label for="name">
+                    <span>Name</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email">
+                    <span>Email</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="card-type">
+                    <span>Card Type:</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <select id="card-type" name="card-type">
+                    <option value="visa">Visa</option>
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="gold-doubloons">Gold Doubloons</option>
+                </select>
+            </p>
+            <p>
+                <label for="credit-card">
+                    <span>Credit Card Number:</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="password" id="credit-card" name="credit-card">
+            </p>
+            <p>
+                <label for="expiration-date">
+                    <span>Expiration</span>
+                    <strong><span aria-label="required">*</span></strong>
+                 </label>
+                <input type="expiration-date" id="expo" name="expiration-date">
+
+                <label for="expiration-date"> 
+                    <span>CVV</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="expiration-date" id="cvv" name="expiration-date">
+            </p>
+            <div id="button-div">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
