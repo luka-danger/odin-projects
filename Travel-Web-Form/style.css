@@ -6,9 +6,19 @@ body {
     justify-content: center;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     display: flex;
     justify-content: center;
+}
+
+h2 {
+    font: 18px sans-serif;
+}
+
+h3 {
+    font: 12px sans-serif;
 }
 
 form {
@@ -62,7 +72,7 @@ button {
 
 input,
 textarea {
-  font: 1em sans-serif;
+  font: 18px sans-serif;
   width: 300px;
   box-sizing: border-box;
   border: 1px solid #999;
