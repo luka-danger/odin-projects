@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <fieldset>
-        <legend>Contact Info</legend> 
-
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+    <form action="/my-handling-form-page" method="post">
+        <fieldset id="form-border">
+            <legend>Contact Info</legend> 
     
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="phone" id="phone-label">Phone</label>
+            <input type="text" id="phone" name="phone">
+        
+            <label for="email" id="mail-label">Email</label>
+            <input type="email" id="email" name="email">
 
-        <textarea rows="20" cols="20" id="text-box">Message</textarea>
-    </fieldset>
+            <label for="msg" id="msg">Message</label>
+            <textarea rows="10" cols="10" id="text-box"></textarea> 
+        
+            <div id="button-div">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </fieldset>
+    </form>
 </body>
 </html>

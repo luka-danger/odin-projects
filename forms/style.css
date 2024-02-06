@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    background-image: url("sky.jpg");
+    background-repeat: repeat;
+}
+
+form {
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+legend {
+    font-size: 20px;
+}
+
+#name-label {
+    display: flex
+}
+
+#phone-label {
+    display: flex;
+    margin-top: 10px;
+}
+
+#mail-label {
+    display: flex; 
+    margin-top: 10px;
+}
+
+#msg {
+    display: flex; 
+    margin-top: 10px;
+}
+
+#button-div {
+    display: flex; 
+}
+
+button {
+    margin: 5px
+}
+
+#form-border {
+    background-color: rgba(225, 225, 225, 0.756)
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
