@@ -15,12 +15,30 @@ form {
     font-size: 20px;
 }
 
-#destination {
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
+  margin: 10px; 
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+#travel {
     background-color: rgba(225, 225, 225, 0.756);
 }
 
-#destination-heading {
+#travel-heading {
     font-size: 20px;
+}
+
+#method, 
+#card-type {
+    font: 1em sans-serif;
 }
 
 #name-label {
@@ -46,6 +64,7 @@ form {
 
 button {
     margin: 5px;
+    font: 1em sans-serif;
 }
 
 .form-border {
@@ -69,3 +88,9 @@ h1 {
 #cvv {
     width: max(50px, 5.45em)
 }
+
+fieldset {
+    width: min(450px);
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
