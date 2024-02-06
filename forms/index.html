@@ -4,25 +4,82 @@
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Travel Site</title>
 </head>
 <body>
-    <form action="/my-handling-form-page" method="post">
-        <fieldset id="form-border">
-            <legend>Contact Info</legend> 
-    
-            <label for="name" id="name-label">Name</label>
-            <input type="text" id="name" name="name">
+    <form>
+        <h1>Travel</h1>
+        <fieldset id="destination">
+            <legend id="destination-heading">Destination</legend>
+                <ul>
+                    <li>
+                        <label for="destination1">
+                            <input type="radio" id="destination1" name="destination" value="ST" /> 
+                            Saturn 
+                        </label>
+                    </li>
+                    <li>
+                        <label for="destination1">
+                            <input type="radio" id="destination2" name="destination" value="CR" />
+                            The Citadel of Ricks
+                        </label>
+                    </li>
+                    <li>
+                        <label for="destination3">
+                            <input type="radio" id="destination3" name="destination" value="KC" />
+                            Kansas City
+                        </label> 
+                    </li>
+                </ul> 
+                <p> 
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </p>
+                <p>
+                    <label for="travel-method">
+                      <span>Travel Method:</span>
+                    </label>
+                    <select id="method" name="method">
+                      <option value="plane">Plane</option>
+                      <option value="jetpack">Spaceship</option>
+                      <option value="unicycle">Unicycle</option>
+                      <option value="walking">Walking (Cheapest Option!)</option>
+                    </select>
+                  </p>
+        </fieldset>
+        <p></p>
+        <fieldset class="form-border">
+            <legend id="payment">Payment</legend> 
             
-            <label for="phone" id="phone-label">Phone</label>
-            <input type="text" id="phone" name="phone">
-        
-            <label for="email" id="mail-label">Email</label>
-            <input type="email" id="email" name="email">
+            <p>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email" id="mail-label">Email</label>
+                <input type="email" name="email">
+            </p>
+            <p>
+                <label for="card-type">
+                    <span>Card Type:</span>
+                </label>
+                <select id="card-type" name="card-type">
+                    <option value="visa">Visa</option>
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="gold-doubloons">Gold Doubloons</option>
+                </select>
+            </p>
+            <p>
+                <label for="credit-card" id="credit-card">Credit Card Number</label>
+                <input type="password" name="credit-card">
+            </p>
+            <p>
+                <label for="expiration-date" id="expiration-date">Expiration Date: </label>
+                <input type="expiration-date" name="expiration-date">
 
-            <label for="msg" id="msg">Message</label>
-            <textarea rows="10" cols="10" id="text-box"></textarea> 
-        
+                <label for="cvv" id="cvv">CVV: </label>
+                <input type="cvv" name="cvv">
+            </p>
             <div id="button-div">
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>

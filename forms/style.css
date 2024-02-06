@@ -1,36 +1,43 @@
 body {
-    display: flex;
     background-image: url("sky.jpg");
     background-repeat: repeat;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form {
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
+    background-color: rgba(255, 255, 255, .5);
 }
 
-legend {
+#payment {
+    font-size: 20px;
+}
+
+#destination {
+    background-color: rgba(225, 225, 225, 0.756);
+}
+
+#destination-heading {
     font-size: 20px;
 }
 
 #name-label {
-    display: flex
-}
-
-#phone-label {
     display: flex;
-    margin-top: 10px;
+    
 }
 
 #mail-label {
-    display: flex; 
-    margin-top: 10px;
+    display: flex;
 }
 
-#msg {
+#card-type {
     display: flex; 
-    margin-top: 10px;
+}
+
+#credit-card {
+    display: flex; 
 }
 
 #button-div {
@@ -38,24 +45,23 @@ legend {
 }
 
 button {
-    margin: 5px
+    margin: 5px;
 }
 
-#form-border {
-    background-color: rgba(225, 225, 225, 0.756)
+.form-border {
+    background-color: rgba(225, 225, 225, 0.756);
 }
 
 input,
 textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
   font: 1em sans-serif;
-
-  /* Uniform text field size */
   width: 300px;
   box-sizing: border-box;
-
-  /* Match form field borders */
   border: 1px solid #999;
+}
+
+h1 {
+    display: flex; 
+    justify-content: center;
 }
 
