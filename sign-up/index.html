@@ -14,49 +14,61 @@
 
         <div class="right">
             <div class="first">
-                <h2>This is not a real service. If this was a 
+                <h3>This is not a real service. If this was a 
                     real service, you would totally sign up because 
                     it would be amazing! So go on, sign up and see what you've
                     been missing!
                     <br><br/>
                     <i>You know you want to.</i>
-                </h2>
+                </h3>
                 <br>
             </div>
             <div class="second">
                 <h3>Sign Up!</h3>
-                <form action="" method="get" class="form-main">
+                <form action="index.html" method="get" class="form-main">
                     <div class="form-divs">
-                        <div class="form-divs">
+                        <div class="form-div">
                             <label for="firstName">First Name</label>
                             <input type="text" id="firstName" name="firstName">
                         </div>
-                        <div class="form-divs">
+                        <div class="form-div">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email">
                         </div>
-                        <div class="form-divs">
+                        <div class="form-div">
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password">
+                            <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            onChange="onChange()"
+                            required>
                         </div>
                     </div>
                     <div class="form-divs">
-                        <div class="form-divs">
+                        <div class="form-div">
                             <label for="lastName">First Name</label>
                             <input type="text" id="lastName" name="lastName">
                         </div>
-                        <div class="form-divs">
+                        <div class="form-div">
                             <label for="phone">Phone</label>
-                            <input type="phone" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone">
                         </div>
-                        <div class="form-divs">
+                        <div class="form-div">
                             <label for="password">Confirm Password</label>
-                            <input type="password" id="password" name="password">
+                            <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            onChange="onChange()"
+                            required>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="third">Siemá</div>
+            <div class="third">
+                <button type="submit" class="button">Create Account</button>
+            </div>
         </div>
     </div>
 </body>

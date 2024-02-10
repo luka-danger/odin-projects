@@ -10,6 +10,7 @@ h1 {
 body {
     margin: 0;
     padding: 0;
+    font-family: Norse-Bold, sans-serif;
 }
 
 .container {
@@ -34,7 +35,7 @@ body {
     flex-direction: column;
     color: black;
     font-family: sans-serif;
-    background-color: rgb(225, 225, 225);
+    background-color: rgb(235, 235, 235);
 }
 
 .first {
@@ -54,8 +55,14 @@ body {
 .form-main {
     display: flex; 
     flex-direction: row;
+    width: 80%;
+    justify-content: center;
 }
 
+.form-div {
+    display: flex;
+    flex-direction: column;
+}
 
 .third {
     height: 28vh;
