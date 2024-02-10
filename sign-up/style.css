@@ -7,15 +7,29 @@ h1 {
     font-family: Norse-Bold, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    justify-content: center;
+    height: 100vh;
 }
 
-.left, .right {
+.left {
+    background-image: url('./waterfall.jpg');
+    width: 35vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: Norse-Bold, sans-serif;
+}
+
+
+.right {
     display: flex;
     justify-content: center;
-    width: 50vh;
 }
