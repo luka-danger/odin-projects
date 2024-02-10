@@ -47,7 +47,15 @@ body {
 
 .second {
     height: 33vh;
+    background-color: white;
+    padding: 30px
 }
+
+.form-main-div {
+    display: flex; 
+    flex-direction: row;
+}
+
 
 .third {
     height: 33vh;
