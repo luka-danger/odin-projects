@@ -20,16 +20,30 @@ body {
 }
 
 .left {
-    background-image: url('./waterfall.jpg');
+    background-image: url('./sneffels.jpg');
     width: 35vw;
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: black;
     font-family: Norse-Bold, sans-serif;
 }
 
 
 .right {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    color: black;
+    font-family: sans-serif;
+}
+
+.first {
+    height: 33vh; 
+}
+
+.second {
+    height: 33vh;
+}
+
+.third {
+    height: 33vh;
 }
