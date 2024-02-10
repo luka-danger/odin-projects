@@ -56,12 +56,18 @@ body {
     display: flex; 
     flex-direction: row;
     width: 80%;
-    justify-content: center;
+}
+
+.form-divs {
+    display: flex;
+    flex-direction: column;
 }
 
 .form-div {
     display: flex;
     flex-direction: column;
+    width: min(250px);
+    padding: 15px;
 }
 
 .third {
