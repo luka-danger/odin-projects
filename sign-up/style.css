@@ -21,7 +21,7 @@ body {
 
 .left {
     background-image: url('./sneffels.jpg');
-    width: 35vw;
+    width: 50vw;
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
@@ -34,10 +34,15 @@ body {
     flex-direction: column;
     color: black;
     font-family: sans-serif;
+    background-color: rgb(225, 225, 225);
 }
 
 .first {
     height: 33vh; 
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
 }
 
 .second {
