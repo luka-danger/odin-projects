@@ -38,7 +38,7 @@ body {
 }
 
 .first {
-    height: 33vh; 
+    height: 28vh; 
     display: flex;
     align-items: center;
     padding: 30px;
@@ -46,17 +46,18 @@ body {
 }
 
 .second {
-    height: 33vh;
+    height: 44vh;
     background-color: white;
     padding: 30px
 }
 
-.form-main-div {
+.form-main {
     display: flex; 
     flex-direction: row;
 }
 
 
 .third {
-    height: 33vh;
+    height: 28vh;
+    padding: 30px;
 }
