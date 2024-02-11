@@ -29,8 +29,32 @@ body {
     background-size: cover;
     color: black;
     font-family: Norse-Bold, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
+.one {
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.two {
+    height: 70vh;
+}
+
+.translucent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 235, 235, 0.397);
+}
+
+.left h1 {
+    font-size: 4.5rem;
+}
 
 .right {
     display: flex;

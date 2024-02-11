@@ -1,6 +1,16 @@
 function onChange() {
-    let password = document.querySelector('input[name=password');
-    let confirm = document.querySelector('input[name=confirm');
-    (confirm.value === password.value)
-    ? confirm.setCustomValidity('') : confirm.setCustomValidity('Password does not match.');
+    let password = document.querySelector("#password").value;
+    let confirm = document.querySelector("#confirmPassword").value;
+
+    let error = document.querySelector("#error");
+
+    if (password = "" && confirmPassword == "") {
+        error.innerText = ""
+    }
+    else if (password === confirmPassword)  {
+        error.innerText = ""
+    }
+    else if(password === confirmPassword) {
+        error.innerText = "Passwords do not match"
+    }
 }

@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
     <title>Sign Up Form</title>
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <h1>Hi</h1>
+            <div class="one">
+                <div class="translucent">
+                    <img src="odin-logo.png" alt="odin-logo" height="130px">
+                    <h1>Odin</h1>
+                </div>
+            </div>
+            <div class="two"></div>
         </div>
 
         <div class="right">
@@ -39,10 +46,11 @@
                             <label for="password">Password</label>
                             <input 
                             type="password" 
-                            id="password" 
                             name="password"
                             minlength="5"
+                            id="password"
                             onChange="onChange()">
+                            <p id="error"></p>
                         </div>
                     </div>
                     <div class="form-divs">
@@ -58,9 +66,9 @@
                             <label for="password">Confirm Password</label>
                             <input 
                             type="password" 
-                            id="password" 
-                            name="password"
+                            name="confirm"
                             minlength="5"
+                            id="confirmPassword"
                             onChange="onChange()">
                         </div>
                     </div>
