@@ -23,6 +23,9 @@ body {
 }
 
 .left {
+    /*
+    background-image: url('./waterfall.jpg');
+    */
     background-image: url('./sneffels.jpg');
     width: 50vw;
     background-repeat: no-repeat;
@@ -120,10 +123,11 @@ button {
     padding: 15px 40px;
     border-radius: 10px;
     font-size: 18px;
-    /* 
-    Use with Waterfall
+    /*
+    Use with Waterfall 
     background-color: rgba(19, 78, 34, 0.95); 
     */
+    /* Use with mountains */
     background-color: rgba(238, 178, 39, 0.95);
     font-weight: bold;
     color: white;
@@ -133,22 +137,29 @@ button {
 
 button:hover {
     /* 
-    Use with Waterfall
+    Use with Waterfall 
     background-color: rgba(19, 78, 34, 0.45); 
     */
+    /* Use with mountains */
     background-color: rgba(238, 178, 39, 0.45);
     cursor: pointer;
 }
 
 button:active {
     /* 
-    Use with Waterfall
+    Use with Waterfall 
     background-color: rgba(19, 78, 34, 0.75); 
     */
-    background-color: rgba(238, 178, 39, 0.75);
+    /* Use with mountains */
+    background-color: rgba(238, 178, 39, 0.45);
 }
 
 .login {
+    /* 
+    Use with Waterfall 
+    color: rgb(19, 78, 34); 
+    */
+    /* Use with mountains */
     color: rgb(238, 178, 39);
     font-weight: bold;
     text-decoration: none;
