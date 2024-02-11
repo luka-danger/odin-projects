@@ -110,10 +110,6 @@ input:focus {
     border: 2.5px solid rgb(49, 138, 227);
 }
 
-input:invalid {
-    border: 2px solid rgb(238, 52, 52);
-}
-
 .third {
     height: 30vh;
     padding: 30px;

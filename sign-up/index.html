@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
     <title>Sign Up Form</title>
 </head>
 <body>
@@ -32,44 +32,58 @@
             </div>
             <div class="second">
                 <h3>Sign Up!</h3>
-                <form action="index.html" method="get" class="form-main">
+                <form action="index.html" class="form-main">
                     <div class="form-divs">
                         <div class="form-div">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName">
-                        </div>
-                        <div class="form-div">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="form-div">
-                            <label for="password">Password</label>
+                            <label>First Name</label>
                             <input 
-                            type="password" 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName"
+                            placeholder="Giannis">
+                        </div>
+                        <div class="form-div">
+                            <label>Email</label>
+                            <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            placeholder="example@mail.com">
+                        </div>
+                        <div class="form-div">
+                            <label>Password</label>
+                            <input 
                             name="password"
-                            minlength="5"
-                            id="password"
-                            onChange="onChange()">
-                            <p id="error"></p>
+                            type="password"
+                            placeholder="Enter a Password"
+                            onChange="onChange()"
+                            required>
                         </div>
                     </div>
                     <div class="form-divs">
                         <div class="form-div">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName">
+                            <label>Last Name</label>
+                            <input type="text" 
+                            id="lastName" 
+                            name="lastName"
+                            placeholder="Antetokounmpo">
                         </div>
                         <div class="form-div">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-div">
-                            <label for="password">Confirm Password</label>
+                            <label>Phone</label>
                             <input 
-                            type="password" 
+                            type="tel" 
+                            id="phone" 
+                            name="phone"
+                            placeholder="+48 600-555-555">
+                        </div>
+                        <div class="form-div">
+                            <label>Confirm Password</label>
+                            <input 
                             name="confirm"
-                            minlength="5"
-                            id="confirmPassword"
-                            onChange="onChange()">
+                            type="password"
+                            placeholder="Re-enter Password"
+                            onChange="onChange()"
+                            required>
                         </div>
                     </div>
                 </form>
