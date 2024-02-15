@@ -6,8 +6,7 @@ h1 {
 
 .container {
     display: inline-grid;
-    grid-template: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px / 
-    130px 130px 130px 130px 130px 130px 130px 130px 130px 130px;
+    grid-template: repeat(10, 80px) / repeat(10, 130px);
     background-color: lightblue; 
 }
 
