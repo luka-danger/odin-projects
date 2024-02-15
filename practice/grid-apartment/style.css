@@ -16,7 +16,7 @@ h1 {
 }
 
 #hallway {
-    grid-column: 9 /11;
+    grid-column: 9 / 11;
     grid-row: 9 / 11;
     display: flex;
     align-items: center;
@@ -37,10 +37,11 @@ h1 {
 }
 
 #laundry {
-    grid-column-start: 8;
-    grid-column-end: 9;
-    grid-row-start: 10;
-    grid-row-end: 11;
+    /* 
+    Grid Area: 
+    row-start / column-start / row-end / column-end
+    */
+    grid-area: 10 / 8 / 11 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
