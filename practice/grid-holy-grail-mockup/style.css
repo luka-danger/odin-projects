@@ -48,20 +48,27 @@
 } 
   
 
+.side-content,
+.photo {
+  display: grid;
+  align-items: center;
+}
+
 .sidebar .photo {
   background-color: white;
   color: black;
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  
 }
-
 
 .sidebar .side-content {
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
 }
 
 .nav {
