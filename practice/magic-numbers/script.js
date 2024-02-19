@@ -1,6 +1,6 @@
 let askName = prompt("What is your name?");
 const sayHello = document.querySelector('.greeting');
-sayHello.textContent = `Hello, ${askName}! :)`
+sayHello.textContent = `Hello, ${askName}! :)`;
 
 function reverseMe(e) {
     const reverse = document.querySelector('.container');
@@ -59,5 +59,10 @@ function goAway(e) {
     slideOut.classList.toggle('slideOut');
     slideOut.textContent = "Okay :("
 }
+
+
+
+
+
 
 

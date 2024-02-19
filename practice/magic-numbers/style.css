@@ -30,12 +30,12 @@ h1 {
     display: flex;
     justify-content: center;
     animation-name: slidein;
-    animation-duration: 6s;
+    animation-duration: 8s;
 }
 
 h1.slideOut {
     animation-name: slideout;
-    animation-duration: 7s;
+    animation-duration: 9s;
 }
 
 .numbers {
