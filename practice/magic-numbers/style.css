@@ -11,13 +11,13 @@ body {
     align-items: center;
 }
 
-.reverse {
+.container {
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
 }
 
-.reverse.now {
+.container.reverse {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;

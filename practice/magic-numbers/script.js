@@ -1,4 +1,4 @@
 function reverseMe(e) {
-    const reverse = document.querySelector('.reverse');
-    reverse.classList.toggle('now');
+    const reverse = document.querySelector('.container');
+    reverse.classList.toggle('reverse');
 }
