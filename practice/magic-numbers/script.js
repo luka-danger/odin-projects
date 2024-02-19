@@ -3,11 +3,11 @@ function reverseMe(e) {
     reverse.classList.toggle('reverse');
 }
 
-function changeColor(e) {
+function changeFontColor(e) {
     const color = document.querySelectorAll('.numbers');
     color.forEach(color => {
-        const changeColor = randomColor();
-        color.style.color = changeColor;
+        const changeFontColor = randomColor();
+        color.style.color = changeFontColor;
     });
 }
 
@@ -16,6 +16,21 @@ function randomColor() {
     let randomGreen = Math.floor(Math.random() * 256);
     let randomBlue = Math.floor(Math.random() * 256);
     return `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+}
+
+function changeCardColor(e) {
+    const color = document.querySelectorAll('.numbers');
+    color.forEach(color => {
+        const changeCardColor = randomColor();
+        color.style.background = changeCardColor;
+    });
+}
+
+function backToNormal(e) {
+    const normal = document.querySelectorAll('.numbers');
+    normal.forEach(normal => {
+        normal.classList.toggle('normal');
+    });
 }
 
 
