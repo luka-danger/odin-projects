@@ -50,4 +50,10 @@ function blackText() {
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
+function goAway(e) {
+    const slideOut = document.querySelector('.greeting');
+    slideOut.classList.toggle('slideOut');
+    slideOut.textContent = "Okay :("
+}
+
 
