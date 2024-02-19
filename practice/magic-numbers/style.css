@@ -11,12 +11,6 @@ body {
     background-color: orange;
 }
 
-.numbers.normal {
-    background-color: green;
-    color: blue;
-}
-
-
 .container {
     display: flex; 
     flex-direction: row;

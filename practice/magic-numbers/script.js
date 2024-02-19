@@ -29,8 +29,25 @@ function changeCardColor(e) {
 function backToNormal(e) {
     const normal = document.querySelectorAll('.numbers');
     normal.forEach(normal => {
-        normal.classList.toggle('normal');
+        const normalColor = orangeBackground();
+        normal.style.background = normalColor;
+        const normalText = blackText();
+        normal.style.color = normalText;
     });
+}
+
+function orangeBackground() {
+    let red = 255;
+    let green = 165;
+    let blue = 0;
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
+function blackText() {
+    let red = 0;
+    let green = 0;
+    let blue = 0;
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 
 
