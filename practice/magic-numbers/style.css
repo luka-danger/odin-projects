@@ -2,12 +2,6 @@ body {
     background: linear-gradient(to right, rgb(230, 108, 129), rgb(152, 25, 152));
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 .numbers {
     border: solid 1px black;
     padding: 2rem;
@@ -15,4 +9,16 @@ body {
     font-size: 50px;
     margin: 1rem;
     align-items: center;
+}
+
+.reverse {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.reverse.now {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 }
