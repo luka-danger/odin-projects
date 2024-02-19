@@ -1,3 +1,7 @@
+let askName = prompt("What is your name?");
+const sayHello = document.querySelector('.greeting');
+sayHello.textContent = `Hello, ${askName}! :)`
+
 function reverseMe(e) {
     const reverse = document.querySelector('.container');
     reverse.classList.toggle('reverse');
