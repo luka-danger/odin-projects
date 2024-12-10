@@ -1,0 +1,125 @@
+
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: inline-grid;
+    grid-template: repeat(10, 80px) / repeat(10, 130px);
+    background-color: lightblue; 
+}
+
+.room {
+    border: 1px solid;
+    text-align: center;
+}
+
+#hallway {
+    grid-column: 9 / 11;
+    grid-row: 9 / 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: none;
+}
+
+#kitchen {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: none;
+    border-top: none;
+}
+
+#laundry {
+    /* 
+    Grid Area: 
+    row-start / column-start / row-end / column-end
+    */
+    grid-area: 10 / 8 / 11 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#guest-room {
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+}
+
+#closet-small {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#guest-bathroom {
+    grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#living-room {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: none;
+}
+
+#bedroom {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: none;
+}
+
+#closet {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bathroom {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 11;
+}
+
+#patio {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 0;
+    grid-row-end: 2;
+}
