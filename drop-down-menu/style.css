@@ -7,6 +7,7 @@ body {
 .hover-main {
     padding-bottom: 2rem;
     max-width: fit-content;
+    cursor: pointer;
 }
 
 .dropdown-button,
@@ -27,6 +28,10 @@ body {
 .dropdown-button:hover,
 .hover-button:hover {
     background-color: lightcoral;
+}
+
+.dropdown-button:active {
+    background-color: rgb(201, 104, 104);
 }
 
 .item:hover {
