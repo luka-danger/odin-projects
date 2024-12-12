@@ -1,0 +1,70 @@
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+} 
+
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+        width: 100%;
+    }
+    to {
+        margin-left: 100%;
+        width: 100%;
+    }
+}
+
+body {
+    background: linear-gradient(to right, rgb(230, 108, 129), rgb(152, 25, 152));
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    animation-name: slidein;
+    animation-duration: 8s;
+}
+
+h1.slideOut {
+    animation-name: slideout;
+    animation-duration: 9s;
+}
+
+.numbers {
+    border: solid 1px black;
+    padding: 2rem;
+    font-size: 50px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    background-color: orange;
+}
+
+.container {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.buttons {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 10px;
+}
