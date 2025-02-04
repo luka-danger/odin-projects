@@ -1,14 +1,3 @@
-// test Node CLI
-function testLoop() {
-    let arr = ['cherry', 'peach', 'kiwi']
-
-    for (element in arr) {
-        // Output each element of array
-        console.log(arr[element])
-    }
-}
-
-
 function fibonacciWhileLoop(length) { 
     // Return empty array for 0 or negative values
     if (length <= 0) return []
@@ -71,9 +60,6 @@ function fibonacciRecursion(length) {
 }
 
 // Output to Console
-console.log('--------Test Loop-----------')
-testLoop()
-console.log("")
 console.log('--------Fibonacci-----------')
 console.log(`While Loop:  [${fibonacciWhileLoop(10)}]`)
 console.log(`For Loop: [${fibonacciForLoop(10)}]`)
