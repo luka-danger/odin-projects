@@ -1,0 +1,17 @@
+#error {
+    color: red;
+    font-size: 1.5rem;
+}
+
+#submit {
+    color: cornflowerblue;
+    font-size: 1.5rem;
+}
+
+body {
+    padding: 1rem;
+}
+
+div {
+    padding: 0.25rem;
+}
