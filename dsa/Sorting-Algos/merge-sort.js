@@ -2,41 +2,45 @@
 // Sort right half of numbers
 // Merge sorted halves
 
-let unsortedArray = [5, 2, 1, 3, 6, 4]
+let unsortedArray = [5, 2, 1, 3, 6]
+let unsortedArrayUneven = [5, 2, 7, 1, 3, 6]
 
 function mergeSort(array) {
     // base case
-    if (array.length == 1 || array.length == 0) {
+    if (array.length <= 1) {
         return array
     }
     // Divide array into 2 sides
-    let middle = Math.floor(array.legnth / 2)
-    let left = array.slice(0, middle)
-    let right = array.slice(middle)
+    let middle = Math.floor(array.length / 2)
+    let leftSide = array.slice(0, middle)
+    let rightSide = array.slice(middle)
 
     // Recursive Sort
-    let sortLeft = mergeSort(left)
-    let sortright = mergeSort(right)
+    return merge(mergeSort(leftSide), mergeSort(rightSide))
+} 
 
+function merge(left, right) {
     // add empty array
     let sortedArray = []
 
-    /* 
-    General idea of how to do it lol
-    // add empty array
-    let sortedArray = []
-    if (array[0] < array[array.length / 2]) {
-        sortedArray.push(array[0])
-    } else { sortedArray.push(array[array.length / 2]) }
+    // Merge sorted halves
+    while (left.length > 0 && right.length > 0) {
+        /* 
+        Ternary Conditional Statement: 
 
-    if (array[1] < array[array.length / 2 + 1]) {
-        sortedArray.push(array[2])
-    } else { sortedArray.push(array[array.length / 2 + 1]) }
+        If left[0] < [right], push left element
+        Else, push right element
+        Use .shift() to remove and remove first element
 
-    return console.log(sortedArray)
-    */ 
+        While Loop will continue to run until no elements remain
+        */
+        sortedArray.push(left[0] < right[0] ? left.shift() : right.shift())
+    }
+    
+    // Add any remaining numbers
+    return sortedArray.concat(left, right)
+    
 }
 
-// console.log(unsortedArray[(6 / 2) + 2])
-
-mergeSort(unsortedArray)
+console.log(mergeSort(unsortedArray))
+console.log(mergeSort(unsortedArrayUneven))
