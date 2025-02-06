@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="images/bear-cub.jpg" alt="a bear cub">
+            <img class="slide" src="images/bears.jpg" alt="a bear and a cub">
+            <img class="slide" src="images/bear-cub2.jpg" alt="a bear cub walking over branches">
+            <img class="slide" src="images/waffles.png" alt="a small dog sleeping">
+        </div>
+
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+</body>
+</html>

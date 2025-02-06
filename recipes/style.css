@@ -1,0 +1,81 @@
+body {
+    background-color: lightgray;
+}
+
+.h1-index {
+    color: green
+}
+
+.h2-index {
+    font-size: 22px;
+    font-style: italic
+}
+
+.reviews {
+    background-color: yellow;
+    height:140px;
+    width: 140px;
+    border: 20px solid green; 
+    padding: 20px;
+    margin: 20px;
+    font-style: bold;
+    text-align: center;
+}
+
+.go-home {
+    font-size: 20px
+}
+
+
+#submit {
+    font-size: 16px;
+}
+
+.link {
+    font-size: 30px;
+    text-align: center;
+}
+
+#strong {
+    font-size: 40px;
+    background-color: white;
+    height:140px;
+    width: 140px;
+    border: 20px solid green; 
+    padding: 20px;
+    margin: 20px;
+    font-style: bold;
+    text-align: center;
+
+}
+
+.index-body {
+    text-align: center;
+}
+
+.index-img {
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#recipes-page {
+    background-color: white;
+    height:170px;
+    width: 240px;
+    border: 20px solid green; 
+    padding: 50px; 
+    margin: 30px;
+    text-align: center;
+}
+
+a:link { color: green}
+
+a:visited {color: green} 
+
+.cat {
+    display: block; 
+    width: auto;
+    margin-left: -70px 
+}

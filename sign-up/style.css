@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./Norse-Bold.otf);
+}
+
+h1 {
+    font-family: Norse-Bold, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Norse-Bold, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left {
+    /*
+    background-image: url('./waterfall.jpg');
+    */
+    background-image: url('./sneffels.jpg');
+    width: 50vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-family: Norse-Bold, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.one {
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.two {
+    height: 70vh;
+}
+
+.translucent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 235, 235, 0.397);
+}
+
+.left h1 {
+    font-size: 4.5rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: "Oxygen";
+    background-color: rgb(235, 235, 235);
+}
+
+.first {
+    height: 30vh; 
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.second {
+    height: 40vh;
+    background-color: white;
+    padding: 0px 30px;
+    font-size: 28px;
+}
+
+.form-main {
+    display: flex; 
+    flex-direction: row;
+    width: 80%;
+}
+
+.form-divs {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+ 
+input {
+    width: min(300px);
+    border: 1px solid #E5E7EB;
+    height: 25px;
+    border-radius: 5px;
+}
+
+input:focus {
+    border: 2.5px solid rgb(49, 138, 227);
+}
+
+.third {
+    height: 30vh;
+    padding: 30px;
+    font-size: 17px;
+}
+
+button {
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    /*
+    Use with Waterfall 
+    background-color: rgba(19, 78, 34, 0.95); 
+    */
+    /* Use with mountains */
+    background-color: rgba(238, 178, 39, 0.95);
+    font-weight: bold;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    /* 
+    Use with Waterfall 
+    background-color: rgba(19, 78, 34, 0.45); 
+    */
+    /* Use with mountains */
+    background-color: rgba(238, 178, 39, 0.45);
+    cursor: pointer;
+}
+
+button:active {
+    /* 
+    Use with Waterfall 
+    background-color: rgba(19, 78, 34, 0.75); 
+    */
+    /* Use with mountains */
+    background-color: rgba(238, 178, 39, 0.45);
+}
+
+.login {
+    /* 
+    Use with Waterfall 
+    color: rgb(19, 78, 34); 
+    */
+    /* Use with mountains */
+    color: rgb(238, 178, 39);
+    font-weight: bold;
+    text-decoration: none;
+}

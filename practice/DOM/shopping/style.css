@@ -1,0 +1,14 @@
+body {
+    background-image: url(images/paper.jpg);
+    background-size: 35%; 
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li button {
+    font-size: 8px; 
+    margin-left: 20px; 
+    color: black
+}
