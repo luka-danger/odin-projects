@@ -30,7 +30,11 @@ function merge(left, right) {
 
         If left[0] < [right], push left element
         Else, push right element
-        Use .shift() to remove and remove first element
+        Use .shift() to return and remove first element of array
+        Ex: 
+        let noodles = [2, 1, 3]
+        noodles.shift() -> removes & returns 2
+        Ouput -> 2; noodles = [1, 3]
 
         While Loop will continue to run until no elements remain
         */
@@ -44,3 +48,7 @@ function merge(left, right) {
 
 console.log(mergeSort(unsortedArray))
 console.log(mergeSort(unsortedArrayUneven))
+
+let test = [4, 5]
+let noodles = [6, 2]
+
