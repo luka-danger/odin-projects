@@ -5,5 +5,8 @@
 let unsortedArray = [5, 2, 1, 3, 6, 4]
 
 function mergeSort(array) {
-    
+    // base case
+    if (array.length == 1 || array.length == 0) {
+        return array
+    }
 }
