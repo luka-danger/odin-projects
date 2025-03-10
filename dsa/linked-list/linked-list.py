@@ -30,16 +30,51 @@ class LinkedList:
         self.length += 1
         # Used for methods that call append() and require boolean
         return True
-        
+    
+    def pop(self):
+        if self.length == 0:
+            return None
+        temp = self.head
+        pre = self.head
+
+        while temp.next:
+            pre = temp
+            # Move temp pointer to the end of the linked list
+            temp = temp.next
+        # Pre will be pointing at second to last node
+        # Set new tail to node pre is pointing to
+        self.tail = pre
+        # Pop end node off linked list
+        self.tail.next = None
+        self.length -= 1
+        # If the linked list only had one node, use this to reset head and tail pointers
+        if self.length == 0:
+            self.head = None
+            self.tail = None
+        return temp
+
+
+
             
 
     #def prepend(self, value):
     #def insert(self, value):
+
+
+## Time Complexity for each Method
+
+## Space Complexity
+
+## Test Methods
 
 my_linked_list = LinkedList(7)
 
 
 my_linked_list.append(9)
 my_linked_list.append(2)
+my_linked_list.append(13)
+
+print(f'Removed node {my_linked_list.pop().value}')
 
 my_linked_list.print_list()
+
