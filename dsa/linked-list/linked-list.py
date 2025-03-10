@@ -10,10 +10,17 @@ class LinkedList:
         self.head = new_node
         self.tail = new_node
         self.length = 1
+    
+    def print_list(self):
+        temp = self.head
+        while temp:
+            print(temp.value)
+            temp = temp.next
+
     #def append(self, value):
     #def prepend(self, value):
     #def insert(self, value):
 
 my_linked_list = LinkedList(7)
 
-print(my_linked_list.head.value)
+my_linked_list.print_list()
