@@ -53,12 +53,26 @@ class LinkedList:
             self.tail = None
         return temp
 
+    def prepend(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            # Point new node to head
+            new_node.next = self.head
+            # Set head to newly prepended node
+            self.head = new_node
+        self.length += 1
+        # Used for methods that call append() and require boolean
+        return True
 
-
-            
-
-    #def prepend(self, value):
+    #def pop_first():
+    #def get():
+    #def set():
     #def insert(self, value):
+    #def remove():
+    #def reverse():
 
 
 ## Time Complexity for each Method
@@ -75,6 +89,8 @@ my_linked_list.append(2)
 my_linked_list.append(13)
 
 print(f'Removed node {my_linked_list.pop().value}')
+
+my_linked_list.prepend(12)
 
 my_linked_list.print_list()
 
