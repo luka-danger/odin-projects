@@ -2,8 +2,8 @@
 // Sort right half of numbers
 // Merge sorted halves
 
-let unsortedArray = [5, 2, 1, 3, 6]
-let unsortedArrayUneven = [5, 2, 7, 1, 3, 6]
+let unsortedArray = [5, 2, 1, 3, 4, 6]
+let unsortedArrayUneven = [5, 2, 7, 4, 1, 3, 6]
 
 function mergeSort(array) {
     // base case
