@@ -94,8 +94,20 @@ class LinkedList:
             temp = temp.next
         return temp
 
-    #def set():
+    # Set value at given index (think change value - not insert)
+    def set_value(self, index, value):
+        temp = self.get(index)
+        if temp: 
+            temp.value = value
+            return True
+        # If temp value returns None
+        return False
+
+
+
+
     #def insert(self, value):
+
     #def remove():
     #def reverse():
 
@@ -119,8 +131,10 @@ my_linked_list.prepend(12)
 
 my_linked_list.pop_first()
 
-print(my_linked_list.get(1).value)
+# Return value of item in index 1
+# print(my_linked_list.get(1).value)
 
-# my_linked_list.print_list()
+my_linked_list.set_value(2, 99)
+my_linked_list.print_list()
 
 
