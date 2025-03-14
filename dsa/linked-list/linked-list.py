@@ -82,8 +82,18 @@ class LinkedList:
             self.tail = None
         return temp
 
+    # Return value of item in index
+    def get(self, index):
+        # Prevent out of range error
+        if index < 0 or index >= self.length:
+            return None
+        temp = self.head
+        # Iterate to the length of the index
+        # Use _ as it is not being used inside for loop
+        for _ in range(index):
+            temp = temp.next
+        return temp
 
-    #def get():
     #def set():
     #def insert(self, value):
     #def remove():
@@ -109,7 +119,8 @@ my_linked_list.prepend(12)
 
 my_linked_list.pop_first()
 
+print(my_linked_list.get(1).value)
 
-my_linked_list.print_list()
+# my_linked_list.print_list()
 
 
