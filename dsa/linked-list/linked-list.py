@@ -67,7 +67,22 @@ class LinkedList:
         # Used for methods that call append() and require boolean
         return True
 
-    #def pop_first():
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        # Set temp variable to first node in list
+        temp = self.head
+        # Set head pointer to next Node
+        self.head = self.head.next
+        # Remove first node from list
+        temp.next = None
+        self.length -= 1
+        # When starting w/ one item
+        if self.length == 0:
+            self.tail = None
+        return temp
+
+
     #def get():
     #def set():
     #def insert(self, value):
@@ -79,7 +94,7 @@ class LinkedList:
 
 ## Space Complexity
 
-## Test Methods
+## Test Methods ## 
 
 my_linked_list = LinkedList(7)
 
@@ -92,5 +107,9 @@ print(f'Removed node {my_linked_list.pop().value}')
 
 my_linked_list.prepend(12)
 
+my_linked_list.pop_first()
+
+
 my_linked_list.print_list()
+
 
