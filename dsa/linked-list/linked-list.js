@@ -71,6 +71,24 @@ class LinkedList {
         return true
     }
 
+    pop() {
+        if (this.length == 0) {
+            return null
+        }
+        let temp = this.head
+        let pre = this.tail
+
+        while (temp.next) {
+            pre = temp
+            temp = temp.next
+        }
+
+        this.tail = pre
+        this.tail.next = null
+        this.length -- 
+        return temp
+    } 
+
     
 }
 
@@ -84,6 +102,5 @@ coolList.append(6)
 
 coolList.prepend(0)
 
-// console.log(coolList.getValueAtIndex(44))
 
 
