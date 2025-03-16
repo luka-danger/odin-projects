@@ -139,4 +139,16 @@ class LinkedList:
         temp.next = None
         self.length -=1 
         return temp
+    
+    def reverse(self):
+        # Reverse head and tail
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+
+        # Initialize variable for left and right side of temp
+        before = None
+        after = temp.next
+
+        # Iterate through list and move each variable to right 
         
