@@ -3,7 +3,6 @@ class Node:
         self.value = value
         self.next = None
 
-# LL Constructor w/ one node
 class LinkedList:
     def __init__(self, value):
         new_node = Node(value)
@@ -141,29 +140,3 @@ class LinkedList:
         self.length -=1 
         return temp
         
-    #def reverse():
-
-
-## Time Complexity for each Method
-
-## Space Complexity
-
-
-
-
-## Test Cases ## 
-
-my_linked_list = LinkedList(1)
-
-my_linked_list.append(2)
-my_linked_list.append(3)
-my_linked_list.append(4)
-my_linked_list.append(5)
-my_linked_list.append(6)
-
-# Remove item at index 4 -> value 5
-my_linked_list.remove(4)
-
-my_linked_list.print_list()
-
-
