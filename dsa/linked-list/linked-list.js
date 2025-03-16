@@ -36,6 +36,19 @@ class LinkedList {
         this.length ++
         return true
     } 
+    prepend(value) {
+        let new_node = new Node(value)
+        if (this.length == 0) {
+            this.head = new_node
+            this.tail = new_node
+        }
+        else {
+            new_node.next = this.head
+            this.head = new_node
+        }
+        this.length ++
+        return true
+    }
 }
 
 let coolList = new LinkedList(1)
@@ -45,5 +58,7 @@ coolList.append(3)
 coolList.append(4)
 coolList.append(5)
 coolList.append(6)
+
+coolList.prepend(0)
 
 coolList.printList()
