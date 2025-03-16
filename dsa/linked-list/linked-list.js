@@ -23,6 +23,27 @@ class LinkedList {
         }
     }
 
+    getSize() {
+        return this.length
+    }
+
+    printSize() {
+        console.log(this.length)
+    }
+
+    getValueAtIndex(index) {
+        if (index < 0 || index >= this.length) {
+            return false
+        }
+        let temp = this.head
+        let count = 0;
+        while (count < index) {
+            temp = temp.next
+            count ++
+        }
+        return temp.value
+    }
+
     append(value) {
         let new_node = new Node(value)
         if (this.length == 0) {
@@ -49,6 +70,8 @@ class LinkedList {
         this.length ++
         return true
     }
+
+    
 }
 
 let coolList = new LinkedList(1)
@@ -61,4 +84,6 @@ coolList.append(6)
 
 coolList.prepend(0)
 
-coolList.printList()
+// console.log(coolList.getValueAtIndex(44))
+
+
