@@ -127,8 +127,20 @@ class LinkedList:
 
 
     def remove(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        if index == self.length - 1:
+            return self.pop()
+        prev = self.get(index - 1)
+        # get method is O(N), this method is O(1)
+        temp = prev.next
+        prev.next = temp.next
+        temp.next = None
+        self.length -=1 
+        return temp
         
-
     #def reverse():
 
 
@@ -136,26 +148,21 @@ class LinkedList:
 
 ## Space Complexity
 
-## Test Methods ## 
-
-my_linked_list = LinkedList(7)
 
 
-my_linked_list.append(9)
+
+## Test Cases ## 
+
+my_linked_list = LinkedList(1)
+
 my_linked_list.append(2)
-my_linked_list.append(13)
+my_linked_list.append(3)
+my_linked_list.append(4)
+my_linked_list.append(5)
+my_linked_list.append(6)
 
-print(f'Removed node {my_linked_list.pop().value}')
-
-my_linked_list.prepend(12)
-
-my_linked_list.pop_first()
-
-# Return value of item in index 1
-print(f'The value at index 1: {my_linked_list.get(1).value}')
-
-
-my_linked_list.insert(2, 27)
+# Remove item at index 4 -> value 5
+my_linked_list.remove(4)
 
 my_linked_list.print_list()
 
