@@ -151,4 +151,12 @@ class LinkedList:
         after = temp.next
 
         # Iterate through list and move each variable to right 
-        
+        for _ in range(self.length):
+            # Move pointer to next node
+            after = temp.next
+            # Reverse pointer
+            temp.next = before
+            # Move pointers across gap
+            # Can't move temp until before has crossed the gap
+            before = temp
+            temp = after
