@@ -104,11 +104,31 @@ class LinkedList:
         return False
 
 
+    def insert(self, index, value):
+        # Out of range
+        if index < 0 or index > self.length:
+            return False
+        # Add node to beginning 
+        if index == 0:
+            return self.prepend(value)
+        # Add node to end
+        if index == self.length:
+            return self.append(value)
+        # Insert new node somewhere else in list
+        new_node = Node(value)
+        # Point temp to given node
+        temp = self.get(index - 1)
+        # Point new node to next node
+        new_node.next = temp.next
+        # Point previous node at index to new node
+        temp.next = new_node
+        self.length += 1
+        return True 
 
 
-    #def insert(self, value):
+    def remove(self, index):
+        
 
-    #def remove():
     #def reverse():
 
 
@@ -132,9 +152,11 @@ my_linked_list.prepend(12)
 my_linked_list.pop_first()
 
 # Return value of item in index 1
-# print(my_linked_list.get(1).value)
+print(f'The value at index 1: {my_linked_list.get(1).value}')
 
-my_linked_list.set_value(2, 99)
+
+my_linked_list.insert(2, 27)
+
 my_linked_list.print_list()
 
 
