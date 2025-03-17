@@ -23,14 +23,6 @@ class LinkedList {
         }
     }
 
-    getSize() {
-        return this.length
-    }
-
-    printSize() {
-        console.log(this.length)
-    }
-
     getValueAtIndex(index) {
         if (index < 0 || index >= this.length) {
             return false
@@ -89,8 +81,20 @@ class LinkedList {
         return temp
     } 
 
+    contains(value) {
+        let temp = this.head
+        for (let i = 0; i < this.length; i++) {
+            if (temp.value == value) {
+                return `Value ${value} at index ${i}`
+            }
+            temp = temp.next
+        }
+        return `Value ${value} not in linked list`
+    }
     
 }
+
+// Test Cases
 
 let coolList = new LinkedList(1)
 
@@ -102,5 +106,11 @@ coolList.append(6)
 
 coolList.prepend(0)
 
+coolList.printList()
 
+console.log(`Linked List contains ${coolList.length} nodes`)
+
+console.log(coolList.contains(7))
+
+console.log(coolList.contains(3))
 
