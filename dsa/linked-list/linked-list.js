@@ -16,6 +16,9 @@ class LinkedList {
     }
 
     printList() {
+        if (this.length == 0) {
+            return console.log('No nodes in list :(')
+        }
         let temp = this.head
         for (let i = 0; i < this.length; i++) {
             console.log(temp.value)
@@ -142,12 +145,26 @@ class LinkedList {
         return temp
     }
 
+    toString() {
+        if (this.length == 0) {
+            return null
+        }
+        let temp = this.head
+        let string = ''
+        while (temp.next != null) {
+            string = string.concat(`( ${temp.value} ) -> `)
+            temp = temp.next
+        }
+        string = string.concat(' null')
+        return string
+    }   
         
 }
 
 // Test Cases
 
 let coolList = new LinkedList(1)
+
 
 coolList.append(2)
 coolList.append(3)
@@ -157,9 +174,9 @@ coolList.append(6)
 
 coolList.prepend(0)
 
-coolList.printList()
+// coolList.printList()
 
-console.log(`Linked List contains ${coolList.length} nodes`)
+// console.log(`Linked List contains ${coolList.length} nodes`)
 
 console.log(coolList.contains(7))
 
@@ -173,12 +190,11 @@ coolList.insert(7, 'another dance party!!!!!!')
 
 coolList.prepend('remove me')
 
-// coolList.remove(0)
+coolList.remove(0)
 
-coolList.printList()
+// coolList.printList()
 
-
-
+console.log(coolList.toString())
 
 
 
