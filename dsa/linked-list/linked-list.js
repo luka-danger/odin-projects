@@ -33,7 +33,7 @@ class LinkedList {
             temp = temp.next
             count ++
         }
-        return temp.value
+        return temp
     }
 
     append(value) {
@@ -90,7 +90,26 @@ class LinkedList {
             temp = temp.next
         }
         return `Value ${value} not in linked list`
-    }    
+    }
+
+    
+    insert(index, value) {
+        if (index < 0 || index > this.length) {
+            return false
+        }
+        if (index == 0) {
+            return this.prepend(value)
+        }
+        if (index == this.length) {
+            return this.append(value)
+        }
+        let new_node = new Node(value)
+        let temp = this.getValueAtIndex(index - 1)
+        new_node.next = temp.next
+        temp.next = new_node
+        this.length ++
+    }
+        
 }
 
 // Test Cases
@@ -105,8 +124,6 @@ coolList.append(6)
 
 coolList.prepend(0)
 
-coolList.insert('pizza', 2)
-
 coolList.printList()
 
 console.log(`Linked List contains ${coolList.length} nodes`)
@@ -114,6 +131,15 @@ console.log(`Linked List contains ${coolList.length} nodes`)
 console.log(coolList.contains(7))
 
 console.log(coolList.contains(3))
+
+coolList.insert(3, 'dance party!!!!')
+
+coolList.insert(8, 7)
+
+coolList.insert(7, 'another dance party!!!!!!')
+
+coolList.printList()
+
 
 
 
