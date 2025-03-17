@@ -90,8 +90,7 @@ class LinkedList {
             temp = temp.next
         }
         return `Value ${value} not in linked list`
-    }
-    
+    }    
 }
 
 // Test Cases
@@ -106,6 +105,8 @@ coolList.append(6)
 
 coolList.prepend(0)
 
+coolList.insert('pizza', 2)
+
 coolList.printList()
 
 console.log(`Linked List contains ${coolList.length} nodes`)
@@ -113,4 +114,7 @@ console.log(`Linked List contains ${coolList.length} nodes`)
 console.log(coolList.contains(7))
 
 console.log(coolList.contains(3))
+
+
+
 
