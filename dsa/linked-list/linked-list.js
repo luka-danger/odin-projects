@@ -81,6 +81,20 @@ class LinkedList {
         return temp
     } 
 
+    popFirst() {
+        if (this.length == 0) {
+            return null
+        }
+        let temp = this.head
+        this.head = this.head.next
+        temp.next = null
+        this.length --
+        if (this.length == 0) {
+            this.tail = null
+        } 
+        return temp
+    }
+
     contains(value) {
         let temp = this.head
         for (let i = 0; i < this.length; i++) {
@@ -109,6 +123,25 @@ class LinkedList {
         temp.next = new_node
         this.length ++
     }
+    
+    remove(index) {
+        if (index < 0 || index > this.length) {
+            return null
+        }
+        if (index == this.length - 1) {
+            return this.pop()
+        }
+        if (index == 0) {
+            return this.popFirst()
+        }
+        let prev = this.getValueAtIndex(index - 1)
+        let temp = prev.next
+        prev.next = temp.next
+        temp.next = null 
+        this.length --
+        return temp
+    }
+
         
 }
 
@@ -138,7 +171,13 @@ coolList.insert(8, 7)
 
 coolList.insert(7, 'another dance party!!!!!!')
 
+coolList.prepend('remove me')
+
+// coolList.remove(0)
+
 coolList.printList()
+
+
 
 
 
