@@ -1,7 +1,7 @@
 import { Node } from "./node-class.js"
 
 // Linked List constructor of size 1
-class LinkedList {
+export class LinkedList {
     constructor(value) {
         let new_node = new Node(value)
         this.head = new_node
@@ -149,47 +149,8 @@ class LinkedList {
             string = string.concat(`( ${temp.value} ) -> `)
             temp = temp.next
         }
-        string = string.concat(' null')
+        string = string.concat(`( ${temp.value} ) -> null`)
         return string
     }   
-        
+     
 }
-
-// Test Cases
-
-let coolList = new LinkedList(1)
-
-
-coolList.append(2)
-coolList.append(3)
-coolList.append(4)
-coolList.append(5)
-coolList.append(6)
-
-coolList.prepend(0)
-
-// coolList.printList()
-
-// console.log(`Linked List contains ${coolList.length} nodes`)
-
-console.log(coolList.contains(7))
-
-console.log(coolList.contains(3))
-
-coolList.insert(3, 'dance party!!!!')
-
-coolList.insert(8, 7)
-
-coolList.insert(7, 'another dance party!!!!!!')
-
-coolList.prepend('remove me')
-
-coolList.remove(0)
-
-// coolList.printList()
-
-console.log(coolList.toString())
-
-
-
-
