@@ -1,10 +1,4 @@
-// Node constructor
-class Node {
-    constructor(value) {
-        this.value = value
-        this.next = null
-    }
-}
+import { Node } from "./node-class.js"
 
 // Linked List constructor of size 1
 class LinkedList {
