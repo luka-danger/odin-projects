@@ -7,6 +7,7 @@ class HashTable:
         # Create buckets
         self.bucket = [None] * size
 
+    # O(1) - same number of operations (for loop is applied to single item, not every item)
     def __hash(self, key):
         my_hash = 0
         for letter in key:
@@ -14,10 +15,12 @@ class HashTable:
             my_hash = (my_hash + ord(letter) * 23) % len(self.bucket)
         return my_hash
     
+    # O(n)
     def print_table(self):
         for i, value in enumerate(self.bucket):
             print(f'{i}: {value}')
-            
+
+    # O(1)        
     def set_value(self, key, value):
         # Use hash function get address
         index = self.__hash(key)
@@ -27,7 +30,8 @@ class HashTable:
             self.bucket[index] = []
         # Append key value pair in bucket
         self.bucket[index].append([key, value])
-        
+    
+    # O(n)
     def get_item(self, key):
         # Use hash function to get address 
         index = self.__hash(key)
@@ -39,6 +43,7 @@ class HashTable:
                     return self.bucket[index][i][1]
         return None
 
+    # O(n^2)
     # Return keys in each bucket
     def keys(self):
         all_keys = []
@@ -49,6 +54,8 @@ class HashTable:
                     all_keys.append(self.bucket[i][j][0])
         return all_keys
     
+    # O(n^2)
+    # Return values in each bucket
     def values(self):
         all_values = []
         for i in range(len(self.bucket)):
