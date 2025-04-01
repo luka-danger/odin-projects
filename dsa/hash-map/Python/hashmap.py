@@ -29,12 +29,33 @@ class HashTable:
         self.bucket[index].append([key, value])
         
     def get_item(self, key):
+        # Use hash function to get address 
         index = self.__hash(key)
         if self.bucket[index] is not None:
+            # Iterate through key value pairs in bucket
             for i in range(len(self.bucket[index])):
+                # If item key == get_item(key), return value 
                 if self.bucket[index][i][0] == key:
                     return self.bucket[index][i][1]
         return None
+
+    # Return keys in each bucket
+    def keys(self):
+        all_keys = []
+        for i in range(len(self.bucket)):
+            # Use second for loop for chaining 
+            if self.bucket[i] is not None:
+                for j in range(len(self.bucket[i])):
+                    all_keys.append(self.bucket[i][j][0])
+        return all_keys
+    
+    def values(self):
+        all_values = []
+        for i in range(len(self.bucket)):
+            if self.bucket[i] is not None:
+                for j in range(len(self.bucket[i])):
+                    all_values.append(self.bucket[i][j][1])
+        return all_values
 
 
 
@@ -57,3 +78,6 @@ my_hash.print_table()
 
 print(my_hash.get_item('cherries'))
 print(my_hash.get_item('tomatoes'))
+
+print(my_hash.keys())
+print(my_hash.values())
