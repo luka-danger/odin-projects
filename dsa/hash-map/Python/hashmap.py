@@ -19,7 +19,7 @@ class HashTable:
             print(f'{i}: {value}')
             
     def set_value(self, key, value):
-        # Use hash function get compute address
+        # Use hash function get address
         index = self.__hash(key)
         # Initialize empty list at address
         if self.bucket[index] == None:
@@ -28,13 +28,24 @@ class HashTable:
         # Append key value pair in bucket
         self.bucket[index].append([key, value])
         
+    def get_item(self, key):
+        index = self.__hash(key)
+        if self.bucket[index] is not None:
+            for i in range(len(self.bucket[index])):
+                if self.bucket[index][i][0] == key:
+                    return self.bucket[index][i][1]
+        return None
 
 
 
+# Practice map and lambda functions 
+# Not related to hashmaps lol
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 b = map(lambda x: x * 2 + 1, a)
 print(list(b))
 
+
+# Test Cases
 my_hash = HashTable()
 
 my_hash.set_value('apples', 27)
@@ -44,3 +55,5 @@ my_hash.set_value('cherries', 27)
 
 my_hash.print_table()
 
+print(my_hash.get_item('cherries'))
+print(my_hash.get_item('tomatoes'))
