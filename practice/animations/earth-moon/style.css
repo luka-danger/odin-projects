@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    height: 100vh;
+    padding: 7em;
+    background-color: black;
+}
+
+.earth-moon {
+    position: relative;
+}
+
+.earth {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.earth::before,
+.earth::after {
+    content: "";
+    position: absolute;
+    background-color: green;
+    border-radius: 50%;
+}
+
+/* Generated clip path percentages w/ chatgpt */
+.earth::before {
+    width: 170px;
+    height: 85px;
+    left: -7px;
+    transform: rotate(340deg);
+    clip-path: polygon(
+    45% 5%, 50% 10%, 55% 15%, /* Alaska and Canada */
+    50% 20%, 45% 30%, 48% 35%, /* US and Central America */
+    50% 45%, 52% 55%, /* Mexico to South America */
+    48% 60%, 46% 70%, /* Narrow part of South America */
+    50% 80%, 52% 85%, /* Brazil / Argentina */
+    50% 95%, 45% 98%, /* Southern tip */
+    40% 90%, 38% 85%, /* Back up */
+    35% 70%, 30% 55%, /* Left side */
+    28% 40%, 30% 30%, /* Central America left */
+    35% 20%, 40% 10% /* Canada */
+  );
+}
+
+/* Generated clip path percentages w/ chatgpt */
+.earth::after {
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    left: -7px;
+    clip-path: polygon(
+    35% 65%, 40% 60%, 50% 58%, /* Northern parts */
+    60% 60%, 65% 65%, 70% 70%, /* East coast */
+    68% 80%, 60% 85%, /* Southeast */
+    50% 90%, 40% 85%, /* South coast */
+    30% 80%, 28% 75%, /* Western side */
+    30% 70%, 35% 65% /* Closing shape */
+  );
+}
+
+
+.moon {
+    background-color: silver;
+    position: relative;
+    left: 40px;
+    top: -60px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+@keyframes orbit {
+    from {
+        transform: 
+            rotate(0deg)
+            translateX(95px);
+    }
+    to {
+        transform: 
+            rotate(360deg)
+            translateX(95px);  
+    }
+}
+
+@media screen {
+    .moon {
+        animation: 
+            orbit 5000ms linear infinite;
+    }
+}
