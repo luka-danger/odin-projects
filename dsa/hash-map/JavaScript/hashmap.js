@@ -36,8 +36,17 @@ class HashMap{
         if (this.buckets[index]) {
             for (let i = 0; i < this.buckets[index].length; i++) {
                 if (this.buckets[index][i][0] == key) {
-                    return `${key}: ${this.buckets[index][i][1]}`
+                    return `Value: ${this.buckets[index][i][1]}, Key: ${key}`
                 }
+            }
+        }
+    }
+
+    hasKey(key) {
+        let index = this.hash(key)
+        if (this.buckets[index]) {
+            for (let i = 0; i < this.buckets[index].length; i++) {
+                return 'True' ? this.buckets[index][i][0] == key : 'False'
             }
         }
     }
@@ -52,5 +61,9 @@ myMap.insert(3, 'kiwis')
 //myMap.printMap()
 
 console.log(myMap.getValue(2))
+
+console.log(myMap.hasKey(1))
+
+console.log(myMap.hasKey(55))
 
 
