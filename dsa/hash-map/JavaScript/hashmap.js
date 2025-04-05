@@ -16,10 +16,12 @@ class HashMap{
     }
 
     printAll() {
+        // 🚨 FIX ME: Create an if that lets user know if nothing is in the hashtable
+
         for (let i = 0; i < this.buckets.length; i++) {
             if (this.buckets[i]) {
                 this.buckets[i].forEach(([key, value]) => console.log(`${key}: ${value}`))
-            } 
+            }
         }
     }
 
@@ -50,6 +52,17 @@ class HashMap{
             }
         }
     }
+
+    removeKey(key) {
+        let index = this.hash(key)
+        if (this.buckets[index]) {
+            for (let i = 0; i < this.buckets[index].length; i++) {
+                if (this.buckets[index][i][0] == key) {
+                    this.buckets[index].splice(i, 1)
+                }
+            }
+        }
+    }
 }
 
 let myMap = new HashMap()
@@ -60,12 +73,16 @@ myMap.insert(3, 'kiwis')
 
 myMap.printAll()
 
-console.log(myMap.getValue(2))
+// console.log(myMap.getValue(2))
 
-console.log(myMap.hasKey(1))
+// console.log(myMap.hasKey(1))
 
-console.log(myMap.hasKey(55))
+// console.log(myMap.hasKey(55))
 
+myMap.removeKey(1)
+myMap.removeKey(2)
+myMap.removeKey(3)
 
+myMap.printAll()
 
 
