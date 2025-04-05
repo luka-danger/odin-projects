@@ -1,0 +1,69 @@
+body {
+    padding-left: 10em;
+    height: 100vh;
+}
+
+.container {
+    width: 50vw;
+    height: 65vh;
+    border: solid 1px black;
+    overflow: hidden;
+}
+
+.upper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    position: relative;
+    animation: 
+        4s alternate-reverse infinite skyChange;
+}
+
+.lower {
+    border-top: solid 2px black;
+    height: 30%;
+    position: relative;
+    animation: 
+        4s alternate-reverse infinite groundChange;
+}
+
+
+.sun {
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 50%;
+    animation: 
+        6s linear 0s infinite alternate sunrise
+}
+
+@keyframes sunrise {
+    from {
+        transform: translateY(50vh);
+    }
+    to {
+        transform: translateY(10vh);
+    }
+}
+
+@keyframes skyChange {
+    from {
+        background-color: lightblue;
+    }
+    to {
+        background-color: pink;
+        
+    }
+}
+
+@keyframes groundChange {
+    from {
+        background-color: burlywood;
+    }
+    to {
+        background-color: darkgoldenrod;
+        
+    }
+}
