@@ -15,7 +15,7 @@ class HashMap{
         return hashCode
     }
 
-    printMap() {
+    printAll() {
         for (let i = 0; i < this.buckets.length; i++) {
             if (this.buckets[i]) {
                 this.buckets[i].forEach(([key, value]) => console.log(`${key}: ${value}`))
@@ -58,12 +58,14 @@ myMap.insert(1, 'noodles')
 myMap.insert(2, 'grapes')
 myMap.insert(3, 'kiwis')
 
-//myMap.printMap()
+myMap.printAll()
 
 console.log(myMap.getValue(2))
 
 console.log(myMap.hasKey(1))
 
 console.log(myMap.hasKey(55))
+
+
 
 
