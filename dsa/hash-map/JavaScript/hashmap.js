@@ -8,26 +8,6 @@ class HashMap{
         this.size = 0;
     }
 
-    increaseCapacity() {
-        this.capacity *= 2;
-        // Create new buckets after resizing array
-        const newBuckets = new Array(this.capacity)
-
-        // Rehash the resized hashmap
-        for (let i = 0; i < this.buckets.length; i++) {
-            let current = this.buckets[i]
-            while (current) {
-                // Re-index entry 
-                const index = this.hash(current.key) % this.capacity
-                let newNode = new Node(current.key, current.value) 
-                newNode.next = newBuckets[index]
-                current = current.next
-            }
-        }
-        // Assign newly hashed buckets to buckets in resized hashmap
-        this.buckets = newBuckets;
-    }
-
     hash(key) {
         let hashCode = 0;
         const primeNum = 31;
@@ -81,6 +61,25 @@ class HashMap{
         if (this.size >= this.capacity * this.loadFactor) {
             this.increaseCapacity();
         }
+    }
+
+    rehash() {
+        this.size = 0;
+        const resizedBuckets = this.buckets;
+        this.buckets = new Array(this.capacity);
+
+        resizedBuckets.forEach(bucket => {
+            let current = bucket;
+            while (current) {
+                this.insert(current.key, current.value);
+                current = current.next;
+            }
+        })
+    }
+
+    increaseCapacity() {
+        this.capacity *= 2;
+        this.rehash();
     }
     
     getValue(key) {
@@ -188,6 +187,12 @@ class HashMap{
     getBuckets() {
         return `Buckets: ${this.buckets.length}`
     }
+
+    testLoadFactor(testPairs) {
+        for (let i = 0; i < testPairs; i++) {
+            this.insert(i, 'testValue')
+        } 
+    }
 }
 
 let myMap = new HashMap()
@@ -227,9 +232,10 @@ console.log(myMap.getAllKeys())
 
 myMap.clearAll()
 
-myMap.printHashMap()
+myMap.printAll()
 
 console.log(myMap.getBuckets())
+
 
 
 
