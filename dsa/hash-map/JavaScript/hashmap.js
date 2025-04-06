@@ -40,7 +40,7 @@ class HashMap{
 
     printAll() {
         if (this.size == 0) {
-            console.log('No key-value pairs in hashtable!')
+            return console.log('No key-value pairs in hashtable!')
         }
         for (let i = 0; i < this.buckets.length; i++) {
             let current = this.buckets[i]
@@ -184,6 +184,10 @@ class HashMap{
         }
         return console.log(hashmap)
     }
+
+    getBuckets() {
+        return `Buckets: ${this.buckets.length}`
+    }
 }
 
 let myMap = new HashMap()
@@ -224,6 +228,8 @@ console.log(myMap.getAllKeys())
 myMap.clearAll()
 
 myMap.printHashMap()
+
+console.log(myMap.getBuckets())
 
 
 
