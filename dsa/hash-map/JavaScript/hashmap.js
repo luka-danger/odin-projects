@@ -82,7 +82,7 @@ class HashMap{
             this.increaseCapacity();
         }
     }
-
+    
     getValue(key) {
         const index = this.hash(key) % this.capacity;
         
@@ -136,12 +136,25 @@ class HashMap{
 
     clearAll() {
         if (this.size == 0) {
-            console.log('Hashtable already cleared!!')
+            return 'Hashtable already cleared!!'
         }
         for (let i = 0; i < this.buckets.length; i++) {
             this.removeKey(i);
         }
         return 'Cleared the hashmap!'
+    }
+
+    getAllValues() {
+        if (this.size == 0) {
+            return 'No keys in hashtable!'
+        }
+        let valuesArray = []
+        for (let i = 0; i < this.buckets.length; i++) {
+            if (this.hasKey(i)) {
+                valuesArray.push(this.getValue(i))
+            }
+        }
+        return valuesArray;
     }
 }
 
@@ -175,6 +188,8 @@ myMap.removeKey(5)
 myMap.printAll()
 
 console.log(`Size: ${myMap.getSize()}`)
+
+console.log(myMap.getAllValues())
 
 
 
