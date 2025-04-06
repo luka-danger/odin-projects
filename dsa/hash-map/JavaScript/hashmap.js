@@ -144,9 +144,22 @@ class HashMap{
         return 'Cleared the hashmap!'
     }
 
-    getAllValues() {
+    getAllKeys() {
         if (this.size == 0) {
             return 'No keys in hashtable!'
+        }
+        let keysArray = []
+        for (let i = 0; i < this.buckets.length; i++) {
+            if (this.hasKey(i)) {
+                keysArray.push(i)
+            }
+        }
+        return keysArray;
+    }
+
+    getAllValues() {
+        if (this.size == 0) {
+            return 'No values in hashtable!'
         }
         let valuesArray = []
         for (let i = 0; i < this.buckets.length; i++) {
@@ -181,7 +194,7 @@ myMap.removeKey(1)
 myMap.removeKey(3)
 */
 
-myMap.removeKey(5)
+// myMap.removeKey(5)
 
 // console.log(myMap.clearAll())
 
@@ -190,6 +203,8 @@ myMap.printAll()
 console.log(`Size: ${myMap.getSize()}`)
 
 console.log(myMap.getAllValues())
+
+console.log(myMap.getAllKeys())
 
 
 
