@@ -169,6 +169,21 @@ class HashMap{
         }
         return valuesArray;
     }
+
+    printHashMap() {
+        if (this.size == 0) {
+            return console.log('No key-value pairs in hashtable!')
+        }
+        let hashmap = []
+        for (let i = 0; i < this.buckets.length; i++) {
+            let current = this.buckets[i]
+            while (current) {
+                hashmap.push(`[${current.key}: ${current.value}]`);
+                current = current.next;
+            }
+        }
+        return console.log(hashmap)
+    }
 }
 
 let myMap = new HashMap()
@@ -205,6 +220,11 @@ console.log(`Size: ${myMap.getSize()}`)
 console.log(myMap.getAllValues())
 
 console.log(myMap.getAllKeys())
+
+myMap.clearAll()
+
+myMap.printHashMap()
+
 
 
 
