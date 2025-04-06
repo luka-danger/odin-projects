@@ -133,6 +133,16 @@ class HashMap{
     getSize() {
         return this.size;
     }
+
+    clearAll() {
+        if (this.size == 0) {
+            console.log('Hashtable already cleared!!')
+        }
+        for (let i = 0; i < this.buckets.length; i++) {
+            this.removeKey(i);
+        }
+        return 'Cleared the hashmap!'
+    }
 }
 
 let myMap = new HashMap()
@@ -160,8 +170,12 @@ myMap.removeKey(3)
 
 myMap.removeKey(5)
 
+// console.log(myMap.clearAll())
+
 myMap.printAll()
 
 console.log(`Size: ${myMap.getSize()}`)
+
+
 
 
