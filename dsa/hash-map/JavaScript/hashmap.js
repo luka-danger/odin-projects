@@ -1,6 +1,6 @@
 import { Node } from "./new-node.js";
 
-class HashMap{
+export class HashMap{
     constructor(loadFactor = 0.8, capacity = 16) {
         this.buckets = new Array(capacity);
         this.capacity = capacity;
@@ -195,46 +195,6 @@ class HashMap{
     }
 }
 
-let myMap = new HashMap()
-
-myMap.insert(1, 'noodles')
-myMap.insert(2, 'grapes')
-myMap.insert(3, 'kiwis')
-myMap.insert(5, 'mangos')
-
-myMap.printAll()
-
-console.log(myMap.getValue(2))
-console.log(myMap.getValue(5))
-console.log(myMap.getValue(1))
-console.log(myMap.getValue(4))
-
-console.log(myMap.hasKey(1))
-console.log(myMap.hasKey(55))
-
-/*
-myMap.removeKey(2)
-myMap.removeKey(1)
-myMap.removeKey(3)
-*/
-
-// myMap.removeKey(5)
-
-// console.log(myMap.clearAll())
-
-myMap.printAll()
-
-console.log(`Size: ${myMap.getSize()}`)
-
-console.log(myMap.getAllValues())
-
-console.log(myMap.getAllKeys())
-
-myMap.clearAll()
-
-myMap.printAll()
-
-console.log(myMap.getBuckets())
 
 
 
