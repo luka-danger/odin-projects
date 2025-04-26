@@ -70,7 +70,36 @@ class BinarySearchTree:
         if self.root == None:
             self.root = Node(value)
         self.__r_insert(self.root, value)
-        
+    
+    def __r_delete(self, current_node, value):
+        if current_node == None:
+            return None
+        if value < current_node.value:
+            current_node.left = self.__delete_node(current_node.left, value)
+        elif value > current_node.value:
+            current_node.right = self.__r_delete(current_node.right, value)
+        else:
+            # If node is a leaf 
+            if current_node.left == None and current_node.right == None:
+                return None
+            # Open left, node on right
+            elif current_node.left == None:
+                current_node = current_node.right
+            # Open right, node on left
+            elif current_node.right == None:
+                current_node = current_node.left
+            # Node on both sides
+            else:
+               'Placeholder' 
+        return current_node
+    
+    def min_value(self, current_node):
+        while current_node.left is not None:
+            current_node = current_node.left
+        return current_node.value
+    
+    def r_delete(self, value):
+        self.__r_delete(self.root, value)
 
 
 
@@ -91,4 +120,8 @@ print(f'Contains 12? - {my_tree.r_contains(12)}')
 print(f'Contains 19? - {my_tree.r_contains(19)}')
 
 my_tree.r_insert(7)
+my_tree.r_insert(48)
 my_tree.r_insert(78)
+
+print(my_tree.min_value(my_tree.root.right))
+
