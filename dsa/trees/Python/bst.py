@@ -75,7 +75,7 @@ class BinarySearchTree:
         if current_node == None:
             return None
         if value < current_node.value:
-            current_node.left = self.__delete_node(current_node.left, value)
+            current_node.left = self.__r_delete(current_node.left, value)
         elif value > current_node.value:
             current_node.right = self.__r_delete(current_node.right, value)
         else:
@@ -124,6 +124,8 @@ print(f'Contains 19? - {my_tree.r_contains(19)}')
 my_tree.r_insert(7)
 my_tree.r_insert(48)
 my_tree.r_insert(78)
+my_tree.insert(2)
+my_tree.r_delete(2)
 
-print(my_tree.min_value(my_tree.root.right))
+print(my_tree.min_value(my_tree.root.left))
 
