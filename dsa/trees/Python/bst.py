@@ -88,9 +88,11 @@ class BinarySearchTree:
             # Open right, node on left
             elif current_node.right == None:
                 current_node = current_node.left
-            # Node on both sides
+            # Child node on both sides
             else:
-               'Placeholder' 
+               sub_tree_min = self.min_value(current_node.right)
+               current_node.value = sub_tree_min
+               current_node.right = self.__r_delete(current_node.right, sub_tree_min)
         return current_node
     
     def min_value(self, current_node):
