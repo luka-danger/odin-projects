@@ -37,6 +37,30 @@ export class Tree {
             this.prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
         }
     }
+
+    insert(value) {
+        // If tree is empty, make value root node
+        if (this.root === null) {
+            return this.root = new Node(value)
+        }
+        let current = this.root
+        while(current) {
+            // Prevent duplicate values
+            if (value === current.value) return null
+            if (value < current.value) {
+                // If no left node, insert value on left
+                if (!current.left) return current.left = new Node(value)
+                // Otherwise make left node current node and continue
+                current = current.left
+            }
+            else {
+                // If no right node, insert value on right
+                if (!current.right) return current.right = new Node(value)
+                // Otherwise make left node current node and continue
+                current = current.right
+            }
+        }
+    }
 }
 
 let myTree = new Tree()
@@ -48,5 +72,8 @@ myTree.buildTree(myArr)
 console.log(myTree.root.value)
 console.log(myTree.root.left.value)
 console.log(myTree.root.right.value)
+
+console.log(myTree.insert(4))
+console.log(myTree.insert(12))
 
 myTree.prettyPrint(myTree.root)
