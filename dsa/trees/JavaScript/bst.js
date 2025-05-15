@@ -251,33 +251,63 @@ export class Tree {
     }
     
     /* 
-    Function: 
+    Function: Checks if the BST is balanced
     
     Definitions: 
-    
+    Balanced BST - For every node in tree, height difference between left 
+    and right is no more than 1, and both left and right subtrees are balanced
 
-    Example:
+    Example 1:
              4
             / \
            2   6
           /\   /\
          1 3  5  7
+
+    isBalanced = true
+
+    Example 2:
+             4
+            / \
+           2   6
+          /\   /\
+         1 3  5  7
+                  \ 
+                  12
+
+    isBalanced = true
+
+    Example 3:
+             4
+            / \
+           2   6
+          /\   /\
+         1 3  5  7
+                  \ 
+                  12
+                  /\
+                 9  15
+
+    isBalanced = false
      */
     isBalanced(node = this.root) {
         // For empty tree
         if (!node) return true;
 
+        // Calculate height of left and right side of trees
         const leftHeight = this._height(node.left)
         const rightHeight = this._height(node.right);
 
+        // Calculate difference of heights
         const heightDifference = Math.abs(leftHeight - rightHeight);
 
+        // Determine if left & right subtrees are balanced
         const leftBalanced = this.isBalanced(node.left)
         const rightBalanced = this.isBalanced(node.right)
 
+        // Return true if difference <= 1 & both left and right subtrees are balanced
         return heightDifference <= 1 && leftBalanced && rightBalanced
     }
-
 }
 
 
