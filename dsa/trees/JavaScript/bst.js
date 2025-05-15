@@ -122,27 +122,134 @@ export class Tree {
     delete(value) {
         this.root = this.__delete(this.root, value)
     }
+
+    breadthFirst(node) {
+        const queue = []
+        const result = []
+        queue.push(node);
+
+        while(queue.length) {
+            // Make current node first element in queue
+            const currrentNode = queue.shift()
+            // Push current node to results
+            result.push(currrentNode.value)
+
+            // Add left child node (if exists)
+            if (currrentNode.left) {queue.push(currrentNode.left)}
+
+            // Add right child node (if exists)
+            if (currrentNode.right) {queue.push(currrentNode.right)}
+        }
+        return result;
+    }
+
+    dfsPreOrder(node) {
+        const queue = []
+        const result = []
+        queue.push(node)
+
+        while (queue.length) {
+            // Make current node last element in queue
+            const currrentNode = queue.pop()
+            result.push(currrentNode.value)
+
+            if(currrentNode.right) {queue.push(currrentNode.right)}
+
+            if (currrentNode.left) {queue.push(currrentNode.left)}
+        }
+        return result;
+    }
+    
+    /* 
+    Function: Recursively call _height for every level, find height of tree
+    
+    Definitions: 
+    Height is largest depth 
+    Depth is number of edges from root to node
+
+    Example:
+             4
+            / \
+           2   6
+          /\   /\
+         1 3  5  7
+        
+    Bottom Layer:
+        root = 1 (not null), this.height(root.left) & root.right == null
+        Math.max(-1, -1) + 1 = 0
+
+    Next Layer:
+        root = 2 (not null), this.height(root.left) & root.right == 0
+        Math.max(0, 0) + 1 = 1
+
+    Top Layer (Root):
+        root = 4 (not null), this.height(root.left) & root.right == 1
+        Math.max(1, 1) + 1 = 2
+
+    Height = 2
+     */
+    _height(node) {
+        // Use for leaf node (initializes height as 0)
+        if (node === null) return -1;
+
+        let leftHeight = this._height(node.left)
+        const rightHeight = this._height(node.right)
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    // Return the height of any subtree in BST
+    height(value) {
+        // Initalize node by finding value in tree
+        const node = this.find(value)
+
+        // If value not in tree
+        if (!node) return `${value} not in tree`
+        
+        return this._height(node)
+    }
+
+    /* 
+    Function: Recursively call depth for every level, starting at the node passed
+    as param, to find depth of node
+    
+    Definitions: 
+    Depth is number of edges from root to node
+
+    Example:
+             4
+            / \
+           2   6
+          /\   /\
+         1 3  5  7
+        
+    Top Layer (Root):
+        depth(1, currentNode = 4, currentLevel = 0)
+
+    Next Layer:
+        depth(1, currentNode = 2, currentLevel = 1)
+
+    Bottom Layer (Value):
+        depth(1, currentNode = 1, currentLevel = 2)
+
+    Height = 2
+     */
+    depth(value, currentNode = this.root, currentLevel = 0) {
+        // If value not in tree
+        if (!currentNode) return `${value} not in tree`
+
+        // Return depth 0 if currentNode is root
+        if (currentNode.value === value) return currentLevel;
+
+        // Recursively move left or right from root to node
+        if (value < currentNode.value) {
+            return this.depth(value, currentNode.left, currentLevel + 1)
+        }
+        else {
+            return this.depth(value, currentNode.right, currentLevel + 1)
+        }
+    }
+
 }
 
-let myTree = new Tree()
-
-let myArr = [1, 2, 3, 4, 5, 6, 7]
-
-myTree.buildTree(myArr)
-
-
-console.log(myTree.root.value)
-console.log(myTree.root.left.value)
-console.log(myTree.root.right.value)
-
-myTree.insert(12)
-myTree.insert(9)
-myTree.insert(15)
-
-myTree.delete(9)
-myTree.delete(12)
-myTree.delete(12)
-myTree.prettyPrint(myTree.root)
-
-console.log(myTree.minValue(12))
 
