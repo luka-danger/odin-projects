@@ -232,7 +232,7 @@ export class Tree {
     Bottom Layer (Value):
         depth(1, currentNode = 1, currentLevel = 2)
 
-    Height = 2
+    Depth = 2
      */
     depth(value, currentNode = this.root, currentLevel = 0) {
         // If value not in tree
@@ -248,6 +248,34 @@ export class Tree {
         else {
             return this.depth(value, currentNode.right, currentLevel + 1)
         }
+    }
+    
+    /* 
+    Function: 
+    
+    Definitions: 
+    
+
+    Example:
+             4
+            / \
+           2   6
+          /\   /\
+         1 3  5  7
+     */
+    isBalanced(node = this.root) {
+        // For empty tree
+        if (!node) return true;
+
+        const leftHeight = this._height(node.left)
+        const rightHeight = this._height(node.right);
+
+        const heightDifference = Math.abs(leftHeight - rightHeight);
+
+        const leftBalanced = this.isBalanced(node.left)
+        const rightBalanced = this.isBalanced(node.right)
+
+        return heightDifference <= 1 && leftBalanced && rightBalanced
     }
 
 }

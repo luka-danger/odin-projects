@@ -32,4 +32,6 @@ console.log(`Height: ${myTree.height(4)}`)
 
 console.log(`Depth: ${myTree.depth(7)}`)
 
+console.log(myTree.isBalanced())
+
 
